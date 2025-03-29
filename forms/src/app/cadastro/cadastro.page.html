@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Cadastro de Usuário</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="usuario.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="usuario.password"></ion-input>
+      </ion-item>
+    </ion-list>
+  
+    <ion-button (click)="salvarUsuario()">Salvar e Ir para Login</ion-button>
+  </ion-content>
+  
