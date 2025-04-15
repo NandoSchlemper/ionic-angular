@@ -1,0 +1,7 @@
+{
+  "name": "veia_do_jogo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
