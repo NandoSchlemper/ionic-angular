@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Jogo da Veia
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Jogo da Véia</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button id="open-action-sheet">Jogar</ion-button>
+
+  <p>Você escolheu: {{ escolhaUsuario }}</p>
+  <p>Computador escolheu: {{ escolheComputador }}</p>
+  <p><strong>{{ resultadoMensagem }}</strong></p>
+
+  <ion-action-sheet 
+    trigger="open-action-sheet"
+    header="Actions"
+    [buttons]="actionSheetButtons"
+    trigger="open-action-sheet"
+    header="Pedra Papel e Tesoura"
+    subHeader="Escolha entre as opções abaixo"
+    [buttons]="actionSheetButtons"
+    (didDismiss)="setOpen(false)"></ion-action-sheet>
 </ion-content>
